@@ -7,8 +7,9 @@ export default defineConfig({
   resolve: {
     alias: [
       {find: "@root", replacement: resolve(__dirname)},
+      {find: "@source", replacement: resolve(join(__dirname, "src"))},
       {find: "@assets", replacement: resolve(join(__dirname, "src/assets"))},
-      {find: "@assets", replacement: resolve(join(__dirname, "src/components"))}
+      {find: "@components", replacement: resolve(join(__dirname, "src/components"))}
     ]
   }
 })
