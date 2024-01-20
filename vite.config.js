@@ -12,5 +12,6 @@ export default defineConfig({
       {find: "@hooks", replacement: resolve(join(__dirname, "src/hooks"))},
       {find: "@components", replacement: resolve(join(__dirname, "src/components"))}
     ]
-  }
+  },
+  base: "https://gaelsm.github.io/Music-Player"
 })
