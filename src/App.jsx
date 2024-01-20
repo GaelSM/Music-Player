@@ -11,17 +11,54 @@ const setMinutesFormat = (seconds) => {
   return `${minutes}:${restSeconds}`
 }
 
+function Information({ title, artist }) {
+  return (
+    <section className="information">
+      <div className="title">
+        <h1> {title} </h1>
+      </div>
+      <div className="artist">
+        <p> {artist} </p>
+      </div>
+    </section>
+  )
+}
+
+function ProgressBar({ currentTime, duration, handleOnChnage }) {
+  return (
+    <section className="progressbar">
+      <div className="times">
+        <div className="current-time">
+          <p> {setMinutesFormat(currentTime)} </p>
+        </div>
+        <div className="duration">
+          <p> {setMinutesFormat(duration)} </p>
+        </div>
+      </div>
+      <div className="bar">
+        <input
+          type="range"
+          min="0"
+          max={duration}
+          value={currentTime}
+          onChange={(e) => handleOnChnage(e.target.value)}
+        />
+      </div>
+    </section>
+  )
+}
+
 export default function App() {
 
-  const { 
-    title, 
-    artist, 
+  const {
+    title,
+    artist,
     cover,
     currentTime,
     duration,
-    audioRef, 
-    playPause, 
-    previousTrack, 
+    audioRef,
+    playPause,
+    previousTrack,
     nextTrack,
     handleOnChnage,
     updateProgressBar
@@ -29,28 +66,22 @@ export default function App() {
 
   return (
     <div className="app">
-      <img src={cover} alt="" />
-      <h1> {title} </h1>
-      <p> {artist} </p>
-      <p> {setMinutesFormat(currentTime)} </p>
-      <input 
-        type="range" 
-        min="0" 
-        max={duration}
-        value={currentTime}
-        onChange={(e) => handleOnChnage(e.target.value)}/>
-      <p> {setMinutesFormat(duration)} </p>
-      <audio 
-        src="./src/assets/Hollowpoint.mp3" 
-        ref={audioRef} 
+      <section className="cover" onClick={playPause}>
+        <img src={cover} alt={`${title} cover`} />
+      </section>
+      <Information title={title} artist={artist} cover={cover} />
+      <ProgressBar handleOnChnage={handleOnChnage} duration={duration} currentTime={currentTime} />
+      <Controls
+        previousTrack={previousTrack}
+        playPause={playPause}
+        nextTrack={nextTrack}
+      />
+      <audio
+        src="./src/assets/Hollowpoint.mp3"
+        ref={audioRef}
         onEnded={nextTrack}
         onTimeUpdate={(e) => updateProgressBar(e.target.currentTime)}
         preload="auto"
-      />
-      <Controls 
-        previousTrack={previousTrack} 
-        playPause={playPause} 
-        nextTrack={nextTrack}
       />
     </div>
   )

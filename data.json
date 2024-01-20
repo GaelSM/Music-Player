@@ -10,5 +10,17 @@
     "artist": "LXST CENTURY",
     "cover": "./src/assets/Odium.jpg",
     "path": "./src/assets/Odium.mp3"
+  },
+  {
+    "title": "Loose Flight",
+    "artist": "Lowx",
+    "cover": "./src/assets/Loose Flight.jpeg",
+    "path": "./src/assets/Loose Flight.mp3"
+  },
+  {
+    "title": "PHANTOM REALITY",
+    "artist": "Lowx",
+    "cover": "./src/assets/Phantom Reality.jpeg",
+    "path": "./src/assets/Phantom Reality.mp3"
   }
 ]
