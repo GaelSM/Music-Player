@@ -2,14 +2,14 @@
   {
     "title": "HOLLOWPOINT",
     "artist": "LXST CENTURY",
-    "cover": "./src/assets/Hollowpoint.jpeg",
-    "path": "./src/assets/Hollowpoint.mp3"
+    "cover": "@assets/Hollowpoint.jpeg",
+    "path": "@assets/Hollowpoint.mp3"
   },
   {
     "title": "ODIUM",
     "artist": "LXST CENTURY",
-    "cover": "./src/assets/Odium.jpeg",
-    "path": "./src/assets/Odium.mp3"
+    "cover": "@assets/Odium.jpeg",
+    "path": "@assets/Odium.mp3"
   },
   {
     "title": "Loose Flight",
