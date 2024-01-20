@@ -22,5 +22,17 @@
     "artist": "Lowx",
     "cover": "https://raw.githubusercontent.com/GaelSM/Music-Player/main/src/assets/Phantom Reality.jpeg",
     "path": "https://raw.githubusercontent.com/GaelSM/Music-Player/main/src/assets/Phantom Reality.mp3"
+  },
+  {
+    "title": "METAMORPHOSIS",
+    "artist": "Interworld",
+    "cover": "https://raw.githubusercontent.com/GaelSM/Music-Player/main/src/assets/Metamorphosis.jpeg",
+    "path": "https://raw.githubusercontent.com/GaelSM/Music-Player/main/src/assets/Metamorphosis.mp3"
+  },
+  {
+    "title": "METAMORPHOSIS 2",
+    "artist": "Interworld",
+    "cover": "https://raw.githubusercontent.com/GaelSM/Music-Player/main/src/assets/Metamorphosis 2.jpeg",
+    "path": "https://raw.githubusercontent.com/GaelSM/Music-Player/main/src/assets/Metamorphosis 2.mp3"
   }
 ]
