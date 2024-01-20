@@ -84,7 +84,7 @@ export default function App() {
         />
       </div>
       <audio
-        src="./src/assets/Hollowpoint.mp3"
+        src="https://raw.githubusercontent.com/GaelSM/Music-Player/main/src/assets/Hollowpoint.mp3"
         ref={audioRef}
         onEnded={nextTrack}
         preload="auto"
