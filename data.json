@@ -1,14 +1,14 @@
 [
   {
-    "title": "Lost in the City Lights",
-    "artist": "Cosmo Sheldrake",
-    "cover": "./assets/cover-1.png",
-    "path": "./assets/lost-in-city-lights-145038.mp3"
+    "title": "HOLLOWPOINT",
+    "artist": "LXST CENTURY",
+    "cover": "./src/assets/Hollowpoint.jpg",
+    "path": "./src/assets/Hollowpoint.mp3"
   },
   {
-    "title": "Forest Lullaby",
-    "artist": "Lesfm",
-    "cover": "./assets/cover-2.png",
-    "path": "./assets/forest-lullaby-110624.mp3"
+    "title": "ODIUM",
+    "artist": "LXST CENTURY",
+    "cover": "./src/assets/Odium.jpg",
+    "path": "./src/assets/Odium.mp3"
   }
 ]

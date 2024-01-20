@@ -1,16 +1,16 @@
 import { Previous, Play, Next } from "@components/Icons";
 import Button from "./Button";
 
-export default function Controls() {
+export default function Controls({ previousTrack, playPause, nextTrack }) {
   return (
     <section className="controls">
-      <Button>
+      <Button handleClick={previousTrack}>
         <Previous />
       </Button>
-      <Button>
+      <Button handleClick={playPause}>
         <Play/>
       </Button>
-      <Button>
+      <Button handleClick={nextTrack}>
         <Next />
       </Button>
     </section>

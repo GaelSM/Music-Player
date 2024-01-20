@@ -9,6 +9,7 @@ export default defineConfig({
       {find: "@root", replacement: resolve(__dirname)},
       {find: "@source", replacement: resolve(join(__dirname, "src"))},
       {find: "@assets", replacement: resolve(join(__dirname, "src/assets"))},
+      {find: "@hooks", replacement: resolve(join(__dirname, "src/hooks"))},
       {find: "@components", replacement: resolve(join(__dirname, "src/components"))}
     ]
   }
