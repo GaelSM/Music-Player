@@ -2,13 +2,13 @@
   {
     "title": "HOLLOWPOINT",
     "artist": "LXST CENTURY",
-    "cover": "./src/assets/Hollowpoint.jpg",
+    "cover": "./src/assets/Hollowpoint.jpeg",
     "path": "./src/assets/Hollowpoint.mp3"
   },
   {
     "title": "ODIUM",
     "artist": "LXST CENTURY",
-    "cover": "./src/assets/Odium.jpg",
+    "cover": "./src/assets/Odium.jpeg",
     "path": "./src/assets/Odium.mp3"
   },
   {

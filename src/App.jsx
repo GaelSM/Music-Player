@@ -66,16 +66,20 @@ export default function App() {
 
   return (
     <div className="app">
+      <div className="left">
       <section className="cover" onClick={playPause}>
         <img src={cover} alt={`${title} cover`} />
       </section>
-      <Information title={title} artist={artist} cover={cover} />
-      <ProgressBar handleOnChnage={handleOnChnage} duration={duration} currentTime={currentTime} />
-      <Controls
-        previousTrack={previousTrack}
-        playPause={playPause}
-        nextTrack={nextTrack}
-      />
+      </div>
+      <div className="right">
+        <Information title={title} artist={artist} cover={cover} />
+        <ProgressBar handleOnChnage={handleOnChnage} duration={duration} currentTime={currentTime} />
+        <Controls
+          previousTrack={previousTrack}
+          playPause={playPause}
+          nextTrack={nextTrack}
+        />
+      </div>
       <audio
         src="./src/assets/Hollowpoint.mp3"
         ref={audioRef}
