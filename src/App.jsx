@@ -1,5 +1,6 @@
 import Controls from "@components/Controls";
 import usePlayer from "@hooks/usePlayer"
+import "@source/App.css"
 
 const setMinutesFormat = (seconds) => {
   let minutes = Math.floor(seconds / 60)
