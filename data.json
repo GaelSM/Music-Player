@@ -2,25 +2,25 @@
   {
     "title": "HOLLOWPOINT",
     "artist": "LXST CENTURY",
-    "cover": "@assets/Hollowpoint.jpeg",
-    "path": "@assets/Hollowpoint.mp3"
+    "cover": "https://raw.githubusercontent.com/GaelSM/Music-Player/main/src/assets/Hollowpoint.jpeg",
+    "path": "https://raw.githubusercontent.com/GaelSM/Music-Player/main/src/assets/Hollowpoint.mp"
   },
   {
     "title": "ODIUM",
     "artist": "LXST CENTURY",
-    "cover": "@assets/Odium.jpeg",
-    "path": "@assets/Odium.mp3"
+    "cover": "https://raw.githubusercontent.com/GaelSM/Music-Player/main/src/assets/Odium.jpeg",
+    "path": "https://raw.githubusercontent.com/GaelSM/Music-Player/main/src/assets/Odium.mp3"
   },
   {
     "title": "Loose Flight",
     "artist": "Lowx",
-    "cover": "./src/assets/Loose Flight.jpeg",
-    "path": "./src/assets/Loose Flight.mp3"
+    "cover": "https://raw.githubusercontent.com/GaelSM/Music-Player/main/src/assets/Loose Flight.jpeg",
+    "path": "https://raw.githubusercontent.com/GaelSM/Music-Player/main/src/assets/Loose Flight.mp3"
   },
   {
     "title": "PHANTOM REALITY",
     "artist": "Lowx",
-    "cover": "./src/assets/Phantom Reality.jpeg",
-    "path": "./src/assets/Phantom Reality.mp3"
+    "cover": "https://raw.githubusercontent.com/GaelSM/Music-Player/main/src/assets/Phantom Reality.jpeg",
+    "path": "https://raw.githubusercontent.com/GaelSM/Music-Player/main/src/assets/.mp3"
   }
 ]
