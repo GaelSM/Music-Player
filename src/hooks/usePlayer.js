@@ -1,20 +1,11 @@
 import { useEffect, useRef, useState } from "react"
 import playlist from "../../data.json"
 
-/*const setMinutesFormat = (seconds) => {
-  let minutes = Math.floor(seconds / 60)
-  let restSeconds = Math.floor(seconds % 60)
-
-  minutes = minutes < 10 ? "0" + minutes : minutes
-  restSeconds = restSeconds < 10 ? "0" + restSeconds : restSeconds
-
-  return `${minutes}:${restSeconds}`
-}*/
-
 export default function usePlayer() {
   const [index, setIndex] = useState(0)
   const [track, setTrack] = useState(playlist[index])
   const [currentTime, setCurrentTime] = useState(0)
+  const [isPaused, setIsPaused] = useState(true)
   const [duration, setDuration] = useState(0)
   const audioRef = useRef()
 
@@ -33,8 +24,16 @@ export default function usePlayer() {
   }
 
   const playPause = () => {
-    if (audioRef.current.paused) audioRef.current.play()
-    else audioRef.current.pause()
+    setIsPaused(() => {
+      if (audioRef.current.paused) {
+        audioRef.current.play()
+        return false
+      }
+      else {
+        audioRef.current.pause()
+        return true
+      }
+    })
   }
 
   const previousTrack = () => {
@@ -47,12 +46,13 @@ export default function usePlayer() {
     setNewTrack(newIndex)
   }
 
-  const handleOnChnage = (value) => {
+  const updateCurrentTime = (value) => {
     audioRef.current.currentTime = value
     setCurrentTime(value)
   }
 
-  const updateProgressBar = (value) => setCurrentTime(value)
+  const updateProgressBar = () => setCurrentTime(audioRef.current.currentTime)
+
 
   return {
     title,
@@ -61,10 +61,11 @@ export default function usePlayer() {
     audioRef,
     currentTime,
     duration,
+    isPaused,
     playPause,
     previousTrack,
     nextTrack,
-    handleOnChnage,
+    updateCurrentTime,
     updateProgressBar
   }
 }

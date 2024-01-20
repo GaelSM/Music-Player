@@ -25,7 +25,7 @@ function Information({ title, artist }) {
   )
 }
 
-function ProgressBar({ currentTime, duration, handleOnChnage }) {
+function ProgressBar({ currentTime, duration, updateCurrentTime}) {
   return (
     <section className="progressbar">
       <div className="times">
@@ -42,7 +42,7 @@ function ProgressBar({ currentTime, duration, handleOnChnage }) {
           min="0"
           max={duration}
           value={currentTime}
-          onChange={(e) => handleOnChnage(e.target.value)}
+          onChange={(e) => updateCurrentTime(e.target.value)}
         />
       </div>
     </section>
@@ -61,32 +61,34 @@ export default function App() {
     playPause,
     previousTrack,
     nextTrack,
-    handleOnChnage,
-    updateProgressBar
+    updateCurrentTime,
+    updateProgressBar,
+    isPaused
   } = usePlayer()
 
   return (
     <div className="app">
       <div className="left">
-      <section className="cover" onClick={playPause}>
-        <img src={cover} alt={`${title} cover`} />
-      </section>
+        <section className="cover" onClick={playPause}>
+          <img src={cover} alt={`${title} cover`} />
+        </section>
       </div>
       <div className="right">
         <Information title={title} artist={artist} cover={cover} />
-        <ProgressBar handleOnChnage={handleOnChnage} duration={duration} currentTime={currentTime} />
+        <ProgressBar duration={duration} currentTime={currentTime} updateCurrentTime={updateCurrentTime}/>
         <Controls
           previousTrack={previousTrack}
           playPause={playPause}
           nextTrack={nextTrack}
+          isPaused={isPaused}
         />
       </div>
       <audio
         src="./src/assets/Hollowpoint.mp3"
         ref={audioRef}
         onEnded={nextTrack}
-        onTimeUpdate={(e) => updateProgressBar(e.target.currentTime)}
         preload="auto"
+        onTimeUpdate={updateProgressBar}
       />
     </div>
   )

@@ -1,5 +1,5 @@
-*::after, 
-*::before, 
+*::after,
+*::before,
 * {
   margin: 0;
   padding: 0;
@@ -16,14 +16,20 @@ img {
 .app {
   width: 100vw;
   height: 100vh;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr;
   padding: 0 50px;
 }
 
-.app .left, .app .right{
+.app .left,
+.app .right {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.app .left {
+  width: 600px;
 }
 
 .app .left .cover {
@@ -31,6 +37,17 @@ img {
   height: 500px;
   border-radius: 10px;
   overflow: hidden;
+  cursor: pointer;
+
+  & img {
+    transition: scale .3s ease;
+  }
+
+  &:hover img {
+    scale: 1.05;
+    transition: scale .3s ease;
+  }
+
 }
 
 .app .right {
@@ -49,9 +66,12 @@ img {
 
 .app .right .progressbar {
   width: 300px;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
 }
 
-.app .right .progressbar .times{
+.app .right .progressbar .times {
   display: flex;
   justify-content: space-between;
 }
@@ -61,6 +81,27 @@ img {
 
   & input {
     width: 100%;
+    outline: none;
+    height: 4px;
+    background: none;
+    border-radius: 10px;
+    border: 0.5px solid;
+    appearance: none;
+  }
+
+  & input::-webkit-slider-thumb {
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border: 1px solid;
+    border-radius: 50%;
+    background: black;
+    cursor: pointer;
+  }
+
+  & input::-moz-range-progress {
+    background-color: green;
+    height: 1em;
   }
 }
 
