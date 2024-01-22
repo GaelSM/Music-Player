@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react"
-import playlist from "../../data.json"
+import playlist from "@root/data.json"
 
 export default function usePlayer() {
   const [index, setIndex] = useState(0)

@@ -1,5 +1,5 @@
 import { Previous, Play, Pause, Next } from "@components/Icons";
-import Button from "./Button";
+import Button from "@components/Button";
 
 export default function Controls({ isPaused, previousTrack, playPause, nextTrack }) {
   return (

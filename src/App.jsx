@@ -1,7 +1,7 @@
 import Controls from "@components/Controls";
+import Information from "@components/Information";
+import ProgressBar from "@components/ProggresBar";
 import usePlayer from "@hooks/usePlayer"
-import Information from "./components/Information";
-import ProgressBar from "./components/ProggresBar";
 import "@source/App.css"
 
 export default function App() {
@@ -24,8 +24,15 @@ export default function App() {
         </section>
       </div>
       <div className="right">
-        <Information title={track.title} artist={track.artist} cover={track.cover} />
-        <ProgressBar duration={duration} audio={audioRef}/>
+        <Information 
+          title={track.title} 
+          artist={track.artist} 
+          cover={track.cover}
+        />
+        <ProgressBar 
+          duration={duration} 
+          audio={audioRef}
+        />
         <Controls
           previousTrack={previousTrack}
           playPause={playPause}
