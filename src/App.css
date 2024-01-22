@@ -16,8 +16,9 @@ img {
 .app {
   width: 100vw;
   height: 100vh;
-  display: grid;
-  grid-template-columns: auto 1fr;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 0 50px;
 }
 
@@ -26,10 +27,6 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.app .left {
-  width: 600px;
 }
 
 .app .left .cover {
@@ -98,11 +95,6 @@ img {
     background: black;
     cursor: pointer;
   }
-
-  & input::-moz-range-progress {
-    background-color: green;
-    height: 1em;
-  }
 }
 
 .app .right .controls {
@@ -111,5 +103,65 @@ img {
 
   & .button {
     cursor: pointer;
+  }
+}
+
+@media (max-width: 1100px) {
+  .app .right .information {
+    & h1 {
+      font-size: 35px;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .app .left .cover {
+    width: 450px;
+    height: 450px;
+  }
+}
+
+@media (max-width: 950px) {
+  .app .left .cover {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 900px) {
+  .app {
+    flex-direction: column;
+    padding: 0;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .app {
+    flex-direction: column;
+    padding: 0;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 450px) {
+  .app {
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 0;
+    gap: 0;
+  }
+  .app .right .information {
+    & h1 {
+      font-size: 25px;
+    }
+  }
+  .app .left .cover {
+    width: 90vw;
+    height: 90vw;
+  }
+  
+  .app .right {
+    height: 100%;
   }
 }
