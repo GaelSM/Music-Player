@@ -1,36 +1,31 @@
 function Play() {
   return (
-    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M21.941 14.244L14.119 10.236C12.686 9.50176 11 10.5696 11 12.2115V19.7885C11 21.4304 12.686 22.4982 14.119 21.764L21.941 17.756C23.353 17.0325 23.353 14.9675 21.941 14.244Z" fill="#000000" />
+    <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16" width="16" height="16">
+      <path d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z"></path>
     </svg>
   )
 }
 
 function Pause() {
   return (
-    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M10.6666 22.6667L10.6666 9.33335" stroke="#000000" strokeWidth="2" strokeLinecap="round" fill="#000000"/>
-      <path d="M5.33325 22.6667L5.33325 9.33335" stroke="#000000" strokeWidth="2" strokeLinecap="round" fill="#000000"/>
+    <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16" width="16" height="16">
+      <path d="M2.7 1a.7.7 0 0 0-.7.7v12.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7H2.7zm8 0a.7.7 0 0 0-.7.7v12.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7h-2.6z"></path>
     </svg>
   )
 }
 
 function Next() {
   return (
-    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M14.1864 14.2517L8.30466 10.9841C6.9716 10.2435 5.33337 11.2074 5.33337 12.7324V19.2676C5.33337 20.7926 6.9716 21.7566 8.30466 21.016L14.1864 17.7483C15.558 16.9863 15.558 15.0137 14.1864 14.2517Z" fill="#000000" />
-      <path d="M21.3334 22.6667L21.3334 9.33335" stroke="#000000" strokeWidth="2" strokeLinecap="round" />
-      <path d="M26.6667 22.6667L26.6667 9.33335" stroke="#000000" strokeWidth="2" strokeLinecap="round" />
+    <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16" width="16" height="16">
+      <path d="M12.7 1a.7.7 0 0 0-.7.7v5.15L2.05 1.107A.7.7 0 0 0 1 1.712v12.575a.7.7 0 0 0 1.05.607L12 9.149V14.3a.7.7 0 0 0 .7.7h1.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7h-1.6z"></path>
     </svg>
   )
 }
 
 function Previous() {
   return (
-    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M17.8136 14.2517L23.6953 10.9841C25.0284 10.2435 26.6666 11.2074 26.6666 12.7324V19.2676C26.6666 20.7926 25.0284 21.7566 23.6953 21.016L17.8136 17.7483C16.442 16.9863 16.442 15.0137 17.8136 14.2517Z" fill="#000000" />
-      <path d="M10.6666 22.6667L10.6666 9.33335" stroke="#000000" strokeWidth="2" strokeLinecap="round" />
-      <path d="M5.33325 22.6667L5.33325 9.33335" stroke="#000000" strokeWidth="2" strokeLinecap="round" />
+    <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16" width="16" height="16">
+      <path d="M3.3 1a.7.7 0 0 1 .7.7v5.15l9.95-5.744a.7.7 0 0 1 1.05.606v12.575a.7.7 0 0 1-1.05.607L4 9.149V14.3a.7.7 0 0 1-.7.7H1.7a.7.7 0 0 1-.7-.7V1.7a.7.7 0 0 1 .7-.7h1.6z"></path>
     </svg>
   )
 }

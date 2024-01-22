@@ -8,7 +8,7 @@ export default function Controls({ isPaused, previousTrack, playPause, nextTrack
         <Previous />
       </Button>
       <Button handleClick={playPause}>
-        { isPaused ? <Pause /> : <Play/> }
+        { isPaused ? <Play/> : <Pause /> }
       </Button>
       <Button handleClick={nextTrack}>
         <Next />

@@ -1,68 +1,18 @@
 import Controls from "@components/Controls";
 import usePlayer from "@hooks/usePlayer"
+import Information from "./components/Information";
+import ProgressBar from "./components/ProggresBar";
 import "@source/App.css"
-
-const setMinutesFormat = (seconds) => {
-  let minutes = Math.floor(seconds / 60)
-  let restSeconds = Math.floor(seconds % 60)
-
-  minutes = minutes < 10 ? "0" + minutes : minutes
-  restSeconds = restSeconds < 10 ? "0" + restSeconds : restSeconds
-
-  return `${minutes}:${restSeconds}`
-}
-
-function Information({ title, artist }) {
-  return (
-    <section className="information">
-      <div className="title">
-        <h1> {title} </h1>
-      </div>
-      <div className="artist">
-        <p> {artist} </p>
-      </div>
-    </section>
-  )
-}
-
-function ProgressBar({ currentTime, duration, updateCurrentTime}) {
-  return (
-    <section className="progressbar">
-      <div className="times">
-        <div className="current-time">
-          <p> {setMinutesFormat(currentTime)} </p>
-        </div>
-        <div className="duration">
-          <p> {setMinutesFormat(duration)} </p>
-        </div>
-      </div>
-      <div className="bar">
-        <input
-          type="range"
-          min="0"
-          max={duration}
-          value={currentTime}
-          onChange={(e) => updateCurrentTime(e.target.value)}
-        />
-      </div>
-    </section>
-  )
-}
 
 export default function App() {
 
   const {
-    title,
-    artist,
-    cover,
-    currentTime,
+    track,
     duration,
     audioRef,
     playPause,
     previousTrack,
     nextTrack,
-    updateCurrentTime,
-    updateProgressBar,
     isPaused
   } = usePlayer()
 
@@ -70,12 +20,12 @@ export default function App() {
     <div className="app">
       <div className="left">
         <section className="cover" onClick={playPause}>
-          <img src={cover} alt={`${title} cover`} />
+          <img src={track.cover} alt={`${track.title} cover`} />
         </section>
       </div>
       <div className="right">
-        <Information title={title} artist={artist} cover={cover} />
-        <ProgressBar duration={duration} currentTime={currentTime} updateCurrentTime={updateCurrentTime}/>
+        <Information title={track.title} artist={track.artist} cover={track.cover} />
+        <ProgressBar duration={duration} audio={audioRef}/>
         <Controls
           previousTrack={previousTrack}
           playPause={playPause}
@@ -83,13 +33,9 @@ export default function App() {
           isPaused={isPaused}
         />
       </div>
-      <audio
-        src="https://raw.githubusercontent.com/GaelSM/Music-Player/main/src/assets/Hollowpoint.mp3"
-        ref={audioRef}
-        onEnded={nextTrack}
-        preload="auto"
-        onTimeUpdate={updateProgressBar}
-      />
+      <audio ref={audioRef}>
+        <source  src="https://raw.githubusercontent.com/GaelSM/Music-Player/main/src/assets/Hollowpoint.mp3"/>
+      </audio>
     </div>
   )
 }
