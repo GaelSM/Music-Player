@@ -40,7 +40,7 @@ export default function App() {
           isPaused={isPaused}
         />
       </div>
-      <audio ref={audioRef}>
+      <audio ref={audioRef} onEnded={nextTrack}>
         <source  src="https://raw.githubusercontent.com/GaelSM/Music-Player/main/src/assets/Hollowpoint.mp3"/>
       </audio>
     </div>
