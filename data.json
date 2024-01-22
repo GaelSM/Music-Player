@@ -34,5 +34,17 @@
     "artist": "Interworld",
     "cover": "https://raw.githubusercontent.com/GaelSM/Music-Player/main/src/assets/Metamorphosis 2.jpeg",
     "path": "https://raw.githubusercontent.com/GaelSM/Music-Player/main/src/assets/Metamorphosis 2.mp3"
+  },
+  {
+    "title": "HORIZON",
+    "artist": "Enxk",
+    "cover": "https://raw.githubusercontent.com/GaelSM/Music-Player/main/src/assets/Horizon.jpeg",
+    "path": "https://raw.githubusercontent.com/GaelSM/Music-Player/main/src/assets/Horizon.mp3"
+  },
+  {
+    "title": "Sahara",
+    "artist": "Hensonn",
+    "cover": "https://raw.githubusercontent.com/GaelSM/Music-Player/main/src/assets/Sahara.jpeg",
+    "path": "https://raw.githubusercontent.com/GaelSM/Music-Player/main/src/assets/Sahara.mp3"
   }
 ]
